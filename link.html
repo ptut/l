@@ -22,21 +22,20 @@
 </head>
 
 <body>
-    Redirecting in,&nbsp;<span id="ct">5</span>&nbsp;seconds.<br/>
-	Please Wait...
-	
-	<script>
-		let linkList = {
-			ukg20_OC: "https://docs.google.com/spreadsheets/d/1cqURKbpO1uReXLZSZrtY7SP0QRWhFOrvGe9ov_RsxcE/edit?usp=sharing"
-		}
-		let ploc = window.location.href;
-		let pcode = ploc.substr(ploc.indexOf("#") + 1);
-		let linkLoc = linkList[pcode];
-		console.log(linkLoc, pcode, linkList);
-		setTimeout(function(){ window.location.href = linkLoc; }, 6000);
-    let i = 5;
-    setTimeout(function(){  document.getElementById("ct").html(i--); }, 1000);
-	</script>
+    Redirecting in,&nbsp;<span id="ct">5</span>&nbsp;seconds.<br/> Please Wait...
+
+    <script>
+        let linkList = {
+        			ukg20_OC: "https://docs.google.com/spreadsheets/d/1cqURKbpO1uReXLZSZrtY7SP0QRWhFOrvGe9ov_RsxcE/edit?usp=sharing"
+        		}
+        		let ploc = window.location.href;
+        		let pcode = ploc.substr(ploc.indexOf("#") + 1);
+        		let linkLoc = linkList[pcode];
+        		    let i = 5;
+        		    setTimeout(function(){  if(i > 0){i--; document.getElementById("ct").html(i); }
+        					  else{window.location.href = linkLoc;}
+        		 	}, 1000);
+    </script>
 </body>
 
 </html>
