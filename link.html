@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    Redirecting in,&nbsp;<span id="ct">15</span>&nbsp;seconds.<br/> Please Wait...
+	<p>Loading in,&nbsp;<span id="ct">5</span>&nbsp;seconds.<br/> Please Wait...</p>
 
     <script>
         let linkList = {
@@ -39,7 +39,7 @@
         		let ploc = window.location.href;
         		let pcode = ploc.substr(ploc.indexOf("#") + 1);
         		let linkLoc = linkList[pcode];
-        		let ct = 10;
+        		let ct = 5;
 	    setInterval(function () {
     if (ct > 0) {
         ct--;
