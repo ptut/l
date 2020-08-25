@@ -32,16 +32,23 @@
 
     <script>
         let linkList = {
-        			ukg20_OC: "https://docs.google.com/spreadsheets/d/1cqURKbpO1uReXLZSZrtY7SP0QRWhFOrvGe9ov_RsxcE/edit?usp=sharing"
+        			ukg20_OC: "https://docs.google.com/spreadsheets/d/1cqURKbpO1uReXLZSZrtY7SP0QRWhFOrvGe9ov_RsxcE/edit?usp=sharing",
+				"":"https://www.google.com/search?q=do+a+barrel+roll"
         		}
         		let ploc = window.location.href;
         		let pcode = ploc.substr(ploc.indexOf("#") + 1);
         		let linkLoc = linkList[pcode];
         		let ct = 5;
-        		setTimeout(function(){
-				if(ct< 0){ct = ct - 1; document.getElementById("ct").html(ct); }
-			  	else{window.location.href = linkLoc;}
-			}, 1000);
+	    setInterval(function () {
+    if (ct > 0) {
+        ct--;
+        document
+            .getElementById("ct")
+            .innerHTML = ct;
+    } else {
+        window.location.href = linkLoc;
+    }
+}, 1000);
     </script>
 </body>
 
