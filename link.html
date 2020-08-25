@@ -28,17 +28,18 @@
 </head>
 
 <body>
-    Redirecting in,&nbsp;<span id="ct">5</span>&nbsp;seconds.<br/> Please Wait...
+    Redirecting in,&nbsp;<span id="ct">15</span>&nbsp;seconds.<br/> Please Wait...
 
     <script>
         let linkList = {
         			ukg20_OC: "https://docs.google.com/spreadsheets/d/1cqURKbpO1uReXLZSZrtY7SP0QRWhFOrvGe9ov_RsxcE/edit?usp=sharing",
-				"":"https://www.google.com/search?q=do+a+barrel+roll"
+				"https://ptut.github.io/l/link.html":"https://www.google.com/search?q=do+a+barrel+roll",
+				"https://ptut.github.io/l/undefined":"https://www.google.com/search?q=do+a+barrel+roll"
         		}
         		let ploc = window.location.href;
         		let pcode = ploc.substr(ploc.indexOf("#") + 1);
         		let linkLoc = linkList[pcode];
-        		let ct = 5;
+        		let ct = 10;
 	    setInterval(function () {
     if (ct > 0) {
         ct--;
